@@ -5,6 +5,9 @@ const myResult = document.querySelector(".resultList");
 //salvo in una variabile l'idirizzo API di Boolean
 const endPointMail = "https://flynn.boolean.careers/exercises/api/random/mail";
 
+//creo ciclo for per avere 10 email
+for (let i = 0; i < 10; i++) {
+
 //faccio una chiamata all'API con axios
 axios.get(endPointMail)
 .then((response) => {
@@ -29,5 +32,9 @@ myResult.appendChild(newLi);
     console.error("errore", error);
     
 });
+
+
+    
+}
 
 
